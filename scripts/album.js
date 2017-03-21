@@ -102,8 +102,8 @@ var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></
 var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
 
 var currentlyPlayingSong = null;
+var currentAlbum = null;
 
-
-$(window).load(function() {
+$(document).ready(function() {
     setCurrentAlbum(albumPicasso);
 });
