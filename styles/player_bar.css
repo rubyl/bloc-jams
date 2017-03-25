@@ -1,10 +1,10 @@
 .player-bar {
-    position:fixed;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 200px;
-    background-color: rgba(255,255,255,0.3);
+    height: 150px;
+    background: rgba(255, 255, 255, 0.3);
     z-index: 100;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .player-bar a,
-.player bar a:hover {
+.player-bar a:hover {
     color: white;
     cursor: pointer;
     text-decoration: none;
@@ -32,6 +32,8 @@
     vertical-align: middle;
 }
 
+/* === MAIN CONTROLS === */
+
 .player-bar .main-controls {
     width: 25%;
     text-align: left;
@@ -39,13 +41,15 @@
 }
 
 .player-bar .main-controls .previous {
-    margin-right: 16.5%
+    margin-right: 16.5%;
 }
 
 .player-bar .main-controls .play-pause {
     margin-right: 15%;
     font-size: 1.6rem;
 }
+
+/* === CURRENTLY PLAYING === */
 
 .player-bar .currently-playing {
     width: 50%;
@@ -54,8 +58,8 @@
 }
 
 .player-bar .currently-playing .song-name,
-.player-bar .curently-playing .artist-name,
-.player-bar .currently-playing. artist-song-mobile {
+.player-bar .currently-playing .artist-name,
+.player-bar .currently-playing .artist-song-mobile {
     text-align: center;
     font-size: 0.75rem;
     margin: 0;
@@ -77,6 +81,8 @@
     display: none;
 }
 
+/* === SEEK BAR === */
+
 .seek-control {
     position: relative;
     font-size: 0.8rem;
@@ -94,34 +100,35 @@
 }
 
 .seek-bar {
-    height: 0.25;
-    background-color: rgba(255,255,255,0.3);
+    height: 0.25rem;
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 2px;
     position: relative;
     cursor: pointer;
 }
 
 .seek-bar .fill {
-    background-color: white;
-    width: 36%;
+    background: white;
+    width: 0%;
     height: 0.25rem;
     border-radius: 2px;
 }
 
 .seek-bar .thumb {
-    position: aboslute;
+    position: absolute;
     height: 0.5rem;
     width: 0.5rem;
-    background-color: white;
-    left: 36%;
-    top 50%;
+    background: white;
+    left: 0%;
     margin-left: -0.25rem;
+    top: 50%;
     margin-top: -0.25rem;
     border-radius: 50%;
     cursor: pointer;
-    -webkit-transition: all 100ms ease-in-out;
-        -moz-transition: all 100ms ease-in-out;
-        transition: all 100ms ease-in-out;
+    transition: width 100ms ease-in-out,
+                height 100ms ease-in-out,
+                margin-top 100ms ease-in-out,
+                margin-left 100ms ease-in-out;
 }
 
 .seek-bar:hover .thumb {
@@ -130,6 +137,8 @@
     margin-top: -0.5rem;
     margin-left: -0.5rem;
 }
+
+/* === VOLUME === */
 
 .player-bar .volume {
     width: 25%;
